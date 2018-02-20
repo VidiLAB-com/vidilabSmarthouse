@@ -1,15 +1,14 @@
 # vidilabSmarthouse
 
-
 Cijeli Arduino kod možete pronaći pod nazivom vidilabSmartHouse.ino
-
-
+Aplikaciju spremnu za instalaciju na Andrid telefone možete pronaći pod nazivom vidilabSmarthouse.apk
+Izvorni kod aplikacije za Android telefone možete pronaći pod nazivom vidilabSmarthouse.aia
+  te ga editirati uz pomoć online aplikacije na adresi http://ai2.appinventor.mit.edu/
 
 # Shema spajanja:
 ![pametnakucashema1](https://user-images.githubusercontent.com/28891269/36415591-bff5b69a-1626-11e8-8c54-bf4e9b02f9e5.png)
 
-
-	Digitalni pinovi 0 i 1 služe za komunikaciju arduina s bluetooth modulom, prilikom snimanja programa na arduino oni moraju biti slobodni. Rx i Tx označavaju smjer komunikaciju i zato moraju biti suprotno spojeni ako gledamo pinove na arduinu i bluetooth modulu. Rx se spaja na Tx, a Tx na Rx. Digitalne pinove 2,3,4 i 5 smo koristili kao izlaz/output za impuls uključivanja/isključivanja releja. Mogli smo ih spojiti i na analogne pinove, ali njih je dosta manje pa smo ih ostavili kako bi u budućnosti mogli dodati neke analogne senzore koji očitavaju vrijednosti. Digitalne pinove 6 i 7 smo koristili kao ulaz/input za očitavanje vrijednosti infracrvenog/IR senzora i foto senzora. Pomoću komparatora napona smo foto senzor spojili kako bi nam javio ima li svjetla ili nema. On isto tako može biti spojen na analogni ulaz i slati vrijednosti u rasponu 0-1023. Senzor tlaka i temperature zraka smo spojili na analogne ulaze jer nam šalje analogne vrijednosti. Ne smijemo zaboraviti kako vanjske komponente kao što su ploča s relejima i senzori trebaju koristiti dodatno vanjsko napajanje napona 5V jer nam arduino ne može pružiti dovoljnu količinu struje kako bi ih napajali. Kao mozak projekta ne moramo koristiti Arduino Uno kao što je prikazano na slici, to može biti bilo koja verzija. Mi smo u našem projektu koristili Croduino, a provjereno radi i na Nano te Mega verziji.
+Digitalni pinovi 0 i 1 služe za komunikaciju arduina s bluetooth modulom, prilikom snimanja programa na arduino oni moraju biti slobodni. Rx i Tx označavaju smjer komunikaciju i zato moraju biti suprotno spojeni ako gledamo pinove na arduinu i bluetooth modulu. Rx se spaja na Tx, a Tx na Rx. Digitalne pinove 2,3,4 i 5 smo koristili kao izlaz/output za impuls uključivanja/isključivanja releja. Mogli smo ih spojiti i na analogne pinove, ali njih je dosta manje pa smo ih ostavili kako bi u budućnosti mogli dodati neke analogne senzore koji očitavaju vrijednosti. Digitalne pinove 6 i 7 smo koristili kao ulaz/input za očitavanje vrijednosti infracrvenog/IR senzora i foto senzora. Pomoću komparatora napona smo foto senzor spojili kako bi nam javio ima li svjetla ili nema. On isto tako može biti spojen na analogni ulaz i slati vrijednosti u rasponu 0-1023. Senzor tlaka i temperature zraka smo spojili na analogne ulaze jer nam šalje analogne vrijednosti. Ne smijemo zaboraviti kako vanjske komponente kao što su ploča s relejima i senzori trebaju koristiti dodatno vanjsko napajanje napona 5V jer nam arduino ne može pružiti dovoljnu količinu struje kako bi ih napajali. Kao mozak projekta ne moramo koristiti Arduino Uno kao što je prikazano na slici, to može biti bilo koja verzija. Mi smo u našem projektu koristili Croduino, a provjereno radi i na Nano te Mega verziji.
 Infracrveni i foto senzori imaju potenciometre koji s komparatorom napona nudi finu regulaciju. Kod infracrvenog senzora možemo određivati udaljenost na kojoj će se aktivirati, dok kod foto određujemo intenzitet svjetlosti aktiviranja. Ovisno o regulaciji senzori će slati 0/Low ili 1/High.
 
 # Programiranje Arduina:
